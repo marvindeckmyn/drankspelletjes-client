@@ -1,0 +1,30 @@
+{
+  "login": {
+    "bg": "Вход",
+    "zh": "登录",
+    "dk": "Login",
+    "de": "Anmeldung",
+    "en": "Login",
+    "et": "Logi sisse",
+    "fi": "Kirjaudu sisään",
+    "fr": "Connexion",
+    "el": "Σύνδεση",
+    "hu": "Bejelentkezés",
+    "id": "Masuk",
+    "it": "Accesso",
+    "ja": "ログイン",
+    "lv": "Pieteikšanās",
+    "lt": "Prisijungimas",
+    "nl": "Inloggen",
+    "pl": "Login",
+    "pt": "Login",
+    "ro": "Autentificare",
+    "ru": "Вход в систему",
+    "sl": "Prijava",
+    "sk": "Prihlásenie",
+    "es": "Inicio de sesión",
+    "cs": "Přihlášení",
+    "tr": "Giriş",
+    "sv": "Inloggning"
+  }
+}
