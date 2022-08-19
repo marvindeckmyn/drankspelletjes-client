@@ -1,0 +1,82 @@
+header {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, max-content);
+  grid-gap: 10px;
+}
+
+main {
+  grid-area: main;
+  width: calc(100vw - 400px);
+  height: calc(100vh - 60px);
+  margin-right: 0;
+  margin-left: auto;
+  padding: 30px;
+}
+
+body {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas: 
+  'aside main';
+
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.languageSelector {
+  width: initial;
+}
+
+label, .label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+button, .btn, .basic_btn {
+  align-items: center;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  font-weight: 500;
+  height: 44px;
+  justify-content: center;
+  margin: 5px 0;
+  width: 100%;
+  background-color: #6c208f;
+  color: white;
+}
+
+.basic_btn {
+  background-color: initial !important;
+  color: #444;
+}
+
+input:not([type="range"]), select {
+  position: relative;
+  border: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 44px;
+  margin: 0 0 18px;
+  padding: 0 8px;
+  width: 100%;
+}
+

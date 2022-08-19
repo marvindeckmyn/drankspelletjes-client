@@ -2,7 +2,8 @@ import { Account } from '../components/models';
 import { doFetch } from '../utils';
 
 const URLS = {
-  LOGIN: '/api/auth.login',
+  LOGIN: '/api/auth/login',
+  LOGOUT: '/api/auth/logout',
 }
 
 class AuthStore {
@@ -20,6 +21,11 @@ class AuthStore {
       password,
     });
   }
+
+  logout = () => {
+    return doFetch(URLS.LOGOUT, 'POST')
+  };
+
 }
 
 export default new AuthStore();

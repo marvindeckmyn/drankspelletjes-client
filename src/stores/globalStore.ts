@@ -3,9 +3,11 @@ import { writable, Writable } from "svelte/store";
 class GlobalStore {
   lang: Writable<string>;
   supportedLanguages: Writable<Array<{short: string, long: string}>>
+  currentPath: Writable<string>;
 
   constructor() {
     this.lang = writable(undefined);
+    this.currentPath = writable(window.location.pathname)
     this.supportedLanguages = writable([
       {short: 'en', long: 'English'},
       {short: 'nl', long: 'Nederlands'},
