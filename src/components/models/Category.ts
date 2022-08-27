@@ -16,7 +16,7 @@ class Category extends Model {
   order: number;
 
   constructor(data: ICategory | undefined) {
-    super()
+    super();
     this.id = data?.id;
     this.name = data?.name || {};
     this.order = data?.order || 0;
