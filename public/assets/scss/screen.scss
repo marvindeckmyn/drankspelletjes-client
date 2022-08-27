@@ -42,6 +42,12 @@ h1 {
   width: initial;
 }
 
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
 label, .label {
   display: block;
   margin-bottom: 8px;
@@ -63,6 +69,10 @@ button, .btn, .basic_btn {
   color: white;
 }
 
+#buttons .btn {
+  margin-right: 20px;
+}
+
 .basic_btn {
   background-color: initial !important;
   color: #444;
@@ -78,5 +88,71 @@ input:not([type="range"]), select {
   margin: 0 0 18px;
   padding: 0 8px;
   width: 100%;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  accent-color: #6c208f;
+  margin-right: 8px;
+}
+
+.dropdown {
+  position: relative;
+  padding: 20px;
+}
+
+.dropdown i {
+  cursor: pointer;
+}
+
+.dropdown .overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+
+.dropdown-list {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  width: max-content;
+  border-radius: 5px;
+  background-color: #eee;
+  z-index: 10;
+}
+
+.dropdown-list li {
+  padding: 20px !important;
+  margin: 0 !important;
+  background-color: #eee !important;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background-color: #6c208f !important;
+  color: #fff;
+}
+
+#buttons .dropdown {
+  padding: 10px;
+}
+
+.over {
+  border: 3px dotted #6c208f;
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #f9f9f9;
+  padding-bottom: 1px;
 }
 

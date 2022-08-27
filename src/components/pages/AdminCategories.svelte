@@ -101,9 +101,11 @@
 </script>
 
 <main>
-  <h1>
-    <FormattedMessage id="categories" />
-  </h1>
+  <div class="main-header">
+    <h1>
+      <FormattedMessage id="categories" />
+    </h1>
+  </div>
 
   <section>
     <AddCategoryModal />
@@ -151,3 +153,7 @@
     {/if}
   </section>
 </main>
+
+<style type="text/scss">
+  @import "../../assets/scss/category.scss";
+</style>
