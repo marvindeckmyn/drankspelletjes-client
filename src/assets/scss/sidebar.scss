@@ -43,7 +43,7 @@ aside {
       text-decoration:  none;
     }
 
-    &:hover {
+    &:hover, #active {
       :global(a) {
         color: $main-color;
       }

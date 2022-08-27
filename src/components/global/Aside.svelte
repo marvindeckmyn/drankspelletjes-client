@@ -37,7 +37,7 @@
     {#if $account.authenticated}
      <ul>
        <li>
-         <Link id={$currentPath.includes('games') && 'active'} to={`/jorisblomme/games`}>
+         <Link id={$currentPath.includes('categories') && 'active'} to={`/jorisblomme/categories`}>
            <FormattedMessage id="drinking_games"/>
          </Link>
        </li>
