@@ -4,7 +4,7 @@ import { doFetch } from '../utils';
 import { navigate } from 'svelte-routing';
 
 const URLS = {
-  ACCOUNT: '/api/account',
+  ACCOUNT: '/api/auth/account',
 }
 
 

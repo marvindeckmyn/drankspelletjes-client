@@ -18,10 +18,10 @@ class Account extends Model {
   constructor(data: IAccount | undefined) {
     super()
 
-    this.name = data?.name || 'Marvin';
+    this.name = data?.name || '';
     this.email = data?.email || '';
     this.password = data?.password || '';
-    this.authenticated = true;
+    this.authenticated = false;
 
     this.validation = {
       email: Validator.email('enter_a_valid_email'),

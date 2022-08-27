@@ -3,7 +3,6 @@
   import { FormattedMessage, Button } from '../elements';
   import { LoginForm } from '../forms';
   import Validator from '../validator/Validator';
-  import { navigate } from "svelte-routing";
 
   const { account } = authStore;
 
@@ -11,7 +10,6 @@
     try {
       await Validator.validate(account, account.validation);
       await authStore.login();
-      navigate('/jorisblomme');
     } catch (err) {
       console.log(err);
     }

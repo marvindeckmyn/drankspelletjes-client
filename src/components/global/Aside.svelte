@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { accountStore, authStore, globalStore } from '../../stores';
   import { navigate, Link } from "svelte-routing";
   import { FormattedMessage}  from '../elements';
@@ -16,10 +17,11 @@
       return
     }
 
-    navigate('/jorisblomme');
+    $account.authenticated = false;
+    navigate('/jorisblomme/login');
   }
 
-  //onMount(accountStore.getAccount);
+  onMount(accountStore.getAccount);
 </script>
 
 <aside>
