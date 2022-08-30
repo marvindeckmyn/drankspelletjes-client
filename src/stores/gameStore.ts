@@ -1,6 +1,7 @@
 import { get, writable, Writable } from 'svelte/store';
 import { Game } from '../components/models';
 import type { IGame } from '../components/models/Game';
+import { http } from '../http';
 import { doFetch } from '../utils';
 
 const URLS = {
@@ -24,7 +25,7 @@ class GameStore {
   getGamesByCategory = async (id: string) => {
     const { status, data } = await doFetch(URLS.GAMES_BY_CATEGORY(id), 'GET');
 
-    if (status !== 200) {
+    if (status !== http.STATUS_OK) {
       throw new Error('FAILED_TO_FETCH_GAMES_BY_CATEGORY');
     }
 
@@ -40,7 +41,7 @@ class GameStore {
   getGameById = async (id: string) => {
     const { status, data: currentGame } = await doFetch(URLS.GAME_ID(id), 'GET');
 
-    if (status !== 200) {
+    if (status !== http.STATUS_OK) {
       throw new Error('FAILED_TO_FETCH_GAMEY');
     }
 
@@ -60,7 +61,7 @@ class GameStore {
     const { status, data: game } = await doFetch(URLS.GAME, 'POST',
     get(this.newGame)) as { status: number, data: IGame };
 
-    if (status !== 200) {
+    if (status !== http.STATUS_OK) {
       throw new Error('FAILED_TO_POST_GAME');
     }
 
@@ -75,7 +76,7 @@ class GameStore {
     const game = get(this.selectedGame)
     const { status } = await doFetch(URLS.GAME_ID(game.id), 'PUT', game);
 
-    if (status !== 200) {
+    if (status !== http.STATUS_OK) {
       throw new Error('FAILED_TO_UPDATE_GAME');
     }
 
@@ -97,7 +98,7 @@ class GameStore {
   deleteGame = async (game: Game) => {
     const { status } = await doFetch(URLS.GAME_ID(game.id), 'DELETE');
 
-    if (status !== 200) {
+    if (status !== http.STATUS_OK) {
       throw new Error('FAILED_TO_DELETE_GAME');
     }
 

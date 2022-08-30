@@ -1,6 +1,7 @@
 import { get, writable, Writable } from 'svelte/store';
 import { Category } from '../components/models';
 import type { ICategory } from '../components/models/Category';
+import { http } from '../http';
 import { doFetch } from '../utils';
 
 const URLS = {
@@ -23,7 +24,7 @@ class CategoryStore {
   getCategories = async () => {
     const { status, data } = await doFetch(URLS.CATEGORY, 'GET');
 
-    if (status !== 200) {
+    if (status !== http.STATUS_OK) {
       throw new Error('FAILED_TO_FETCH_CATEGORIES');
     }
 
@@ -39,7 +40,7 @@ class CategoryStore {
   getCategoryById = async (id: string) => {
     const { status, data: currentCategory } = await doFetch(URLS.CATEGORY_ID(id), 'GET');
 
-    if (status !== 200) {
+    if (status !== http.STATUS_OK) {
       throw new Error('FAILED_TO_FETCH_CATEGORY');
     }
 
@@ -59,7 +60,7 @@ class CategoryStore {
     const { status, data: category } = await doFetch(URLS.CATEGORY, 'POST',
     get(this.newCategory)) as { status: number, data: ICategory };
 
-    if (status !== 200) {
+    if (status !== http.STATUS_OK) {
       throw new Error('FAILED_TO_POST_CATEGORY');
     }
 
@@ -74,7 +75,7 @@ class CategoryStore {
     const category = get(this.selectedCategory)
     const { status } = await doFetch(URLS.CATEGORY_ID(category.id), 'PUT', category);
 
-    if (status !== 200) {
+    if (status !== http.STATUS_OK) {
       throw new Error('FAILED_TO_UPDATE_CATEGORY');
     }
 
@@ -96,7 +97,7 @@ class CategoryStore {
   deleteCategory = async (category: Category) => {
     const { status } = await doFetch(URLS.CATEGORY_ID(category.id), 'DELETE');
 
-    if (status !== 200) {
+    if (status !== http.STATUS_OK) {
       throw new Error('FAILED_TO_DELETE_CATEGORY');
     }
 

@@ -1,6 +1,7 @@
 import { Account } from '../components/models';
 import { doFetch } from '../utils';
 import { navigate } from 'svelte-routing';
+import { http } from '../http';
 
 const URLS = {
   LOGIN: '/api/auth/login',
@@ -23,7 +24,7 @@ class AuthStore {
       password,
     });
 
-    if (status !== 200) {
+    if (status !== http.STATUS_OK) {
       throw new Error('FAILED_TO_LOG_IN');
     }
 

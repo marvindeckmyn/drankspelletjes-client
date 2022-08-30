@@ -2,6 +2,7 @@ import { Account } from '../components/models';
 import { writable, Writable } from 'svelte/store';
 import { doFetch } from '../utils';
 import { navigate } from 'svelte-routing';
+import { http } from '../http';
 
 const URLS = {
   ACCOUNT: '/api/auth/account',
@@ -19,7 +20,7 @@ class AccountStore {
   getAccount = async () => {
     const { status, data } = await doFetch(URLS.ACCOUNT, 'GET');
 
-    if (status !== 200) {
+    if (status !== http.STATUS_OK) {
       throw new Error('FAILED_TO_FETCH_ACCOUNT');
     }
 
