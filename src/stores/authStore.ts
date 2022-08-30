@@ -24,6 +24,11 @@ class AuthStore {
       password,
     });
 
+    if (status === http.STATUS_UNAUTHORIZED) {
+      throw new Error('INVALID_EMAIL_OR_PASSWORD');
+    }
+
+
     if (status !== http.STATUS_OK) {
       throw new Error('FAILED_TO_LOG_IN');
     }
