@@ -105,6 +105,14 @@ class CategoryStore {
       if (index > -1) {
         categories.splice(index, 1);
       }
+
+      categories.forEach(category => {
+        category.order = categories.indexOf(category) + 1;
+
+        this.setSelectedCategory(category);
+        this.updateCategory();
+      })
+
       return categories;
     })
   }
