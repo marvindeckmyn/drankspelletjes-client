@@ -26,6 +26,14 @@ class Validator {
     }
   };
 
+  static multiInput = (message = 'cannot_be_empty') => {
+    return (input: {[key: string]: string}) => {
+      return {
+        message: message,
+        error: Object.entries(input).length === 0,
+      }
+    }
+  }
 
   static email = (message = "should_be_a_valid_email") => {
     return (email: string) => {

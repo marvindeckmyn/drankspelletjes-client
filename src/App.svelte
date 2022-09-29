@@ -7,6 +7,7 @@
   import { globalStore } from './stores';
   import { onMount, onDestroy } from 'svelte';
   import { globalHistory } from 'svelte-routing/src/history';
+  import Notifications from 'svelte-notifications';
 
   const { currentPath } = globalStore;
   let unsub = undefined;
@@ -25,7 +26,7 @@
 	export let url = "";
 </script>
 
-
+<Notifications>
 
 <Router {url}>
 
@@ -44,3 +45,5 @@
     <AdminGames id="{params.id}"/>
   </Route>
 </Router>
+
+</Notifications>

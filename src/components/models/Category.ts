@@ -22,7 +22,7 @@ class Category extends Model {
     this.order = data?.order || 0;
 
     this.validation = {
-      name: Validator.input('enter_a_valid_name'),
+      name: Validator.multiInput('enter_a_valid_name'),
     }
 
     Validator.initalize(this, this.validation)

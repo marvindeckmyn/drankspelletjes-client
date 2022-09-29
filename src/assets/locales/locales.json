@@ -238,5 +238,41 @@
     "tr": "Kapat",
     "hr": "Zatvoriti",
     "ceb": "Suod nga"
+  },
+  "category_added": {
+    "en": "Category added",
+    "nl": "Category toegevoegd",
+    "fr": "Catégorie ajoutée",
+    "de": "Kategorie hinzugefügt",
+    "es": "Categoría añadida",
+    "it": "Categoria aggiunta",
+    "pt": "Categoria adicionada",
+    "tr": "Kategori eklendi",
+    "hr": "Dodana kategorija",
+    "ceb": "Gidugang ang kategorya"
+  },
+  "edit_category": {
+    "en": "Edit category",
+    "nl": "Bewerk categorie",
+    "fr": "Modifier la catégorie",
+    "de": "Kategorie bearbeiten",
+    "es": "Editar categoría",
+    "it": "Modifica categoria",
+    "pt": "Categoria de edição",
+    "tr": "Kategori düzenle",
+    "hr": "Uredi kategoriju",
+    "ceb": "Usba ang kategorya"
+  },
+  "category_updated": {
+    "en": "Category updated",
+    "nl": "Categorie bijgewerkt",
+    "fr": "Catégorie mise à jour",
+    "de": "Kategorie aktualisiert",
+    "es": "Categoría actualizada",
+    "it": "Categoria aggiornata",
+    "pt": "Categoria actualizada",
+    "tr": "Kategori güncellendi",
+    "hr": "Kategorija ažurirana",
+    "ceb": "Gi-update ang kategorya"
   }
 }
