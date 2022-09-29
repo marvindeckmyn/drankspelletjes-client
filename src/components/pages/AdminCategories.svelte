@@ -109,7 +109,7 @@
     </h1>
   </div>
 
-  <section>
+  <section id="categories">
     <AddCategoryModal />
     <EditCategoryModal />
     <DeleteCategoryModal />

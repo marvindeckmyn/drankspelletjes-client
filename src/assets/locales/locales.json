@@ -322,5 +322,17 @@
     "tr": "Kategori {category}'yi silmek istediğinizden emin misiniz?",
     "hr": "Jeste li sigurni da želite izbrisati kategoriju {category}?",
     "ceb": "Sigurado ka ba nga gusto nimong papason ang kategorya {category}?"
+  },
+  "add_new_drinking_game": {
+    "en": "Add new drinking game",
+    "nl": "Voeg nieuw drankspelletje toe",
+    "fr": "Ajouter un nouveau jeu de boisson",
+    "de": "Neues Trinkspiel hinzufügen",
+    "es": "Añadir un nuevo juego de beber",
+    "it": "Aggiungi un nuovo gioco alcolico",
+    "pt": "Adicionar novo jogo de beber",
+    "tr": "Yeni içki oyunu ekle",
+    "hr": "Dodajte novu igru ​​s pićem",
+    "ceb": "Pagdugang bag-ong dula sa pag-inom"
   }
 }

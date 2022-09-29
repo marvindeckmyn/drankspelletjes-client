@@ -73,6 +73,12 @@ button, .btn, .basic_btn {
   margin-right: 20px;
 }
 
+#categories .btn,
+#games .btn {
+  width: max-content;
+  padding: 10px;
+}
+
 .basic_btn {
   background-color: initial !important;
   color: #444;
