@@ -80,7 +80,7 @@
 
   const goToGame = (category: Category) => {
     categoryStore.setSelectedCategory(category);
-    navigate(`/shop/categories/games/${category.id}`);
+    navigate(`/jorisblomme/categories/games/${category.id}`);
   }
 
   const openEditCategoryModal = (ev: Event, category: Category) => {
