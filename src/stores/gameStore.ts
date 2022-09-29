@@ -1,5 +1,5 @@
 import { get, writable, Writable } from 'svelte/store';
-import { Game } from '../components/models';
+import { Game, GameNecessity } from '../components/models';
 import type { IGame } from '../components/models/Game';
 import { http } from '../http';
 import { doFetch } from '../utils';
@@ -15,10 +15,16 @@ class GameStore {
   newGame: Writable<Game>;
   selectedGame: Writable<Game>;
 
+  newNecessity: Writable<GameNecessity>;
+  newNecessities: Writable<GameNecessity[]>;
+
   constructor() {
     this.games = writable([]);
     this.newGame = writable(new Game(undefined));
     this.selectedGame = writable(new Game(undefined));
+
+    this.newNecessity = writable(new GameNecessity(undefined));
+    this.newNecessities = writable([]);
   }
 
   // getGamesByCategory fetches all the games of a category

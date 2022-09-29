@@ -9,3 +9,6 @@ export { default as Modal } from './Modal.svelte';
 export { default as MultiLangInput } from './MultiLangInput.svelte';
 export { default as Spinner } from './Spinner.svelte';
 export { default as Dropdown } from './Dropdown.svelte';
+export { default as Checkbox } from './Checkbox.svelte';
+export { default as DeleteButton } from './DeleteButton.svelte';
+export { default as AddButton } from './AddButton.svelte';

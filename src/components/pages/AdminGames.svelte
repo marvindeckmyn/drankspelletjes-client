@@ -1,8 +1,10 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import type { Game } from '../models';
-  import { categoryStore, gameStore, globalStore } from '../../stores';
-    import { Button } from '../elements';
+  import { categoryStore, gameStore,
+    globalStore, modalStore } from '../../stores';
+  import { Button } from '../elements';
+  import { AddGameModalOne } from '../modals';
 
   const { selectedCategory } = categoryStore;
   const { lang } = globalStore;
@@ -28,7 +30,7 @@
   }
 
   const openAddGameModal = () => {
-
+    modalStore.openModal('addGameOne');
   }
 
   onMount(getCategoryByID);
@@ -39,6 +41,8 @@
   <h1>{$selectedCategory.name[$lang]}</h1>
 
   <section id="games">
+    <AddGameModalOne />
+
     <div id="buttons">
       <Button text="add_new_drinking_game" onClick={openAddGameModal} />
     </div>

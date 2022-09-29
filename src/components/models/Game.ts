@@ -14,6 +14,7 @@ export interface IGame {
   highlight: boolean;
   views: number;
   order: number;
+  imageBlob: string;
 }
 
 class Game extends Model {
@@ -29,6 +30,7 @@ class Game extends Model {
   highlight: boolean;
   views: number;
   order: number;
+  imageBlob: string;
 
   constructor(data: IGame | undefined) {
     super();

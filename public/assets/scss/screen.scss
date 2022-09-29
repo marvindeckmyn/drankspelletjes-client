@@ -79,6 +79,10 @@ button, .btn, .basic_btn {
   padding: 10px;
 }
 
+#games .imgContainer .btn {
+  width: 100%;
+}
+
 .basic_btn {
   background-color: initial !important;
   color: #444;
@@ -158,3 +162,17 @@ input[type="checkbox"] {
   padding-bottom: 1px;
 }
 
+.necessityform {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+#games .necessityform .btn {
+  width: 20%;
+}
+
+#check {
+  display: flex;
+  align-items: baseline;
+}

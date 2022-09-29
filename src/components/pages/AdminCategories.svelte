@@ -92,7 +92,7 @@
   const openDeleteCategoryModal = (ev: Event, category: Category) => {
     try {
       categoryStore.setSelectedCategory(category);
-      modalStore.openModal('deleteCategoryModal');
+      modalStore.openModal('deleteCategory');
       ev.stopPropagation();
     } catch (err) {
       console.log(err);

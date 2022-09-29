@@ -9,7 +9,7 @@
   const { addNotification } = getNotificationsContext();
 
   const closeModal = () => {
-    modalStore.closeModal('deleteCategoryModal');
+    modalStore.closeModal('deleteCategory');
   }
 
   const deleteCategory = async () => {
@@ -32,7 +32,7 @@
   $: category = {'category': $selectedCategory.name[$lang]};
 </script>
 
-<Modal id="deleteCategoryModal">
+<Modal id="deleteCategory">
   <div class="modal-header" id="delete">
     <h1>
       <FormattedMessage id="delete_category"/>

@@ -29,7 +29,9 @@
     "rollup-plugin-scss": "^3.0.0",
     "sass": "^1.54.3",
     "sirv-cli": "^2.0.0",
+    "svelte-easy-crop": "^1.0.7",
     "svelte-notifications": "^0.9.97",
-    "svelte-routing": "^1.6.0"
+    "svelte-routing": "^1.6.0",
+    "uuid": "^9.0.0"
   }
 }
