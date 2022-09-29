@@ -71,6 +71,18 @@
     "hr": "Bok",
     "ceb": "Hi"
   },
+  "name": {
+    "en": "Name",
+    "nl": "Naam",
+    "fr": "Nom",
+    "de": "Name",
+    "es": "Nombre",
+    "it": "Nome",
+    "pt": "Nome",
+    "tr": "İsim",
+    "hr": "Ime",
+    "ceb": "Ngalan"
+  },
   "drinking_games": {
     "en": "Drinking games",
     "nl": "Drankspelletjes",
@@ -202,5 +214,29 @@
     "tr": "Kategori yok",
     "hr": "Nema kategorija",
     "ceb": "Walay mga kategoriya"
+  },
+  "placeholder_category_name": {
+    "en": "Card game, dice game, board game...",
+    "nl": "Kaartspel, dobbelspel, bordspel...",
+    "fr": "Jeu de cartes, jeu de dés, jeu de société...",
+    "de": "Kartenspiel, Würfelspiel, Brettspiel...",
+    "es": "Juego de cartas, juego de dados, juego de mesa...",
+    "it": "Gioco di carte, gioco di dadi, gioco da tavolo...",
+    "pt": "Jogo de cartas, jogo de dados, jogo de tabuleiro...",
+    "tr": "Kart oyunu, zar oyunu, masa oyunu...",
+    "hr": "Kartaška igra, kockica, društvena igra...",
+    "ceb": "Dula sa kard, dula sa dice, dula sa board..."
+  },
+  "close_modal": {
+    "en": "Close",
+    "nl": "Sluit",
+    "fr": "Fermez",
+    "de": "Schließen",
+    "es": "Cerrar",
+    "it": "Chiudere",
+    "pt": "Fechar",
+    "tr": "Kapat",
+    "hr": "Zatvoriti",
+    "ceb": "Suod nga"
   }
 }
