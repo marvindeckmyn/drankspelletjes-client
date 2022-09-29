@@ -274,5 +274,53 @@
     "tr": "Kategori güncellendi",
     "hr": "Kategorija ažurirana",
     "ceb": "Gi-update ang kategorya"
+  },
+  "view_games": {
+    "en": "View games",
+    "nl": "Bekijk spelletjes",
+    "fr": "Voir les jeux",
+    "de": "Spiele ansehen",
+    "es": "Ver juegos",
+    "it": "Visualizza i giochi",
+    "pt": "Ver jogos",
+    "tr": "Oyunları görüntüle",
+    "hr": "Pogledajte igre",
+    "ceb": "Tan-awa ang mga dula"
+  },
+  "delete_category": {
+    "en": "Delete category",
+    "nl": "Verwijder categorie",
+    "fr": "Supprimer catégorie",
+    "de": "Kategorie löschen",
+    "es": "Borrar categoría",
+    "it": "Cancellare categoria",
+    "pt": "Eliminar categoria",
+    "tr": "Kategoriyi sil",
+    "hr": "Izbriši kategoriju",
+    "ceb": "Pagtangtang sa kategorya"
+  },
+  "category_deleted": {
+    "en": "Category deleted",
+    "nl": "Categorie verwijderd",
+    "fr": "Catégorie supprimée",
+    "de": "Kategorie gelöscht",
+    "es": "Categoría eliminada",
+    "it": "Categoria cancellata",
+    "pt": "Categoria eliminada",
+    "tr": "Kategori silindi",
+    "hr": "Kategorija izbrisana",
+    "ceb": "Gitangtang ang kategorya"
+  },
+  "are_you_sure_you_want_to_delete_category": {
+    "en": "Are you sure you want to delete category {category}?",
+    "nl": "Weet je zeker dat je categorie {category} wil verwijderen?",
+    "fr": "Etes-vous sûr de vouloir supprimer la catégorie {category} ?",
+    "de": "Sind Sie sicher, dass Sie die Kategorie {category} löschen möchten?",
+    "es": "¿Está seguro de que quiere eliminar la categoría {category}?",
+    "it": "Siete sicuri di voler eliminare la categoria {category}?",
+    "pt": "Tem a certeza de que quer eliminar a categoria {category}?",
+    "tr": "Kategori {category}'yi silmek istediğinizden emin misiniz?",
+    "hr": "Jeste li sigurni da želite izbrisati kategoriju {category}?",
+    "ceb": "Sigurado ka ba nga gusto nimong papason ang kategorya {category}?"
   }
 }

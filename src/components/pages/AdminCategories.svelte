@@ -2,7 +2,8 @@
   import { onMount } from 'svelte';
   import { categoryStore, globalStore, modalStore } from '../../stores';
   import { FormattedMessage, Button, Spinner, Dropdown } from '../elements';
-  import { AddCategoryModal, EditCategoryModal } from '../modals';
+  import { AddCategoryModal, EditCategoryModal, 
+    DeleteCategoryModal } from '../modals';
   import type { Category } from '../models';
   import { navigate } from 'svelte-routing';
 
@@ -88,9 +89,10 @@
     ev.stopPropagation();
   }
 
-  const deleteCategory = (ev: Event, category: Category) => {
+  const openDeleteCategoryModal = (ev: Event, category: Category) => {
     try {
-      categoryStore.deleteCategory(category);
+      categoryStore.setSelectedCategory(category);
+      modalStore.openModal('deleteCategoryModal');
       ev.stopPropagation();
     } catch (err) {
       console.log(err);
@@ -110,6 +112,8 @@
   <section>
     <AddCategoryModal />
     <EditCategoryModal />
+    <DeleteCategoryModal />
+
     <Button text="add_new_category" onClick={openAddCategoryModal} />
 
     {#if $categories.length !== 0}
@@ -129,12 +133,12 @@
 
         <Dropdown>
           <li on:click={() => goToGame(category)}>
-            <FormattedMessage id="view_products"/>
+            <FormattedMessage id="view_games"/>
           </li>
           <li on:click={(ev) => openEditCategoryModal(ev, category)}>
             <FormattedMessage id="edit_category"/>
           </li>
-          <li on:click={(ev) => deleteCategory(ev, category)}>
+          <li on:click={(ev) => openDeleteCategoryModal(ev, category)}>
             <FormattedMessage id="delete_category"/>
           </li>
         </Dropdown>
