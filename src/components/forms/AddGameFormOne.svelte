@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { gameStore } from '../../stores';
+  import { accountStore, gameStore } from '../../stores';
   import { AddButton, Checkbox, DeleteButton,
     Error, Input, Label, MultiLangInput } from '../elements';
   import { GameNecessity } from '../models';
@@ -8,6 +8,9 @@
   let errors = [];
 
   const { newGame, newNecessity, newNecessities } = gameStore;
+  const { account } = accountStore;
+
+  $newGame.credits = $account.name;
 
   const addNecessity = () => {
     newNecessities.update(necessities => {
@@ -32,6 +35,10 @@
       return necessities;
     })
   }
+
+  $newGame.getActiveErrors().subscribe(activeErrors => {
+    errors = activeErrors;
+  })
 </script>
 
 <Error errors={errors} />

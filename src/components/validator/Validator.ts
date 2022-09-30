@@ -35,6 +35,15 @@ class Validator {
     }
   }
 
+  static uint = (message = 'cannot_be_negative') => {
+    return (input: number) => {
+      return {
+        message: message,
+        error: input < 0,
+      }
+    }
+  }
+
   static email = (message = "should_be_a_valid_email") => {
     return (email: string) => {
       const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

@@ -61,7 +61,7 @@ class CategoryStore {
     get(this.newCategory)) as { status: number, data: ICategory };
 
     if (status !== http.STATUS_OK) {
-      throw new Error('FAILED_TO_POST_CATEGORY');
+      throw new Error('failed_to_post_category');
     }
 
     this.categories.update(categories => {

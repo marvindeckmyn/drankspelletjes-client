@@ -12,3 +12,4 @@ export { default as Dropdown } from './Dropdown.svelte';
 export { default as Checkbox } from './Checkbox.svelte';
 export { default as DeleteButton } from './DeleteButton.svelte';
 export { default as AddButton } from './AddButton.svelte';
+export { default as MultiLangTextEditor } from './MultiLangTextEditor.svelte';

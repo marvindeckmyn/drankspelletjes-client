@@ -1,14 +1,23 @@
 <script lang="ts">
-  import { modalStore } from "../../stores";
+  import { gameStore, modalStore } from "../../stores";
   import { Button, FormattedMessage, Modal } from "../elements";
   import { AddGameFormOne } from '../forms';
+  import Validator from "../validator/Validator";
+
+  const { newGame } = gameStore;
 
   const closeModal = () => {
     modalStore.closeModal('addGameOne');
   }
 
   const goToStepTwo = async () => {
-
+    try {
+      await Validator.validate($newGame, $newGame.validationOne);
+      closeModal();
+      modalStore.openModal('addGameTwo');
+    } catch (err) {
+      console.log(err);
+    }
   }
 
 </script>

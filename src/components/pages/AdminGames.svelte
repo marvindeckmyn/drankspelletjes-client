@@ -4,7 +4,7 @@
   import { categoryStore, gameStore,
     globalStore, modalStore } from '../../stores';
   import { Button } from '../elements';
-  import { AddGameModalOne } from '../modals';
+  import { AddGameModalOne, AddGameModalTwo } from '../modals';
 
   const { selectedCategory } = categoryStore;
   const { lang } = globalStore;
@@ -42,6 +42,7 @@
 
   <section id="games">
     <AddGameModalOne />
+    <AddGameModalTwo />
 
     <div id="buttons">
       <Button text="add_new_drinking_game" onClick={openAddGameModal} />

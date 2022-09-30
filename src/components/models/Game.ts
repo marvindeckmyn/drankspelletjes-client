@@ -1,4 +1,4 @@
-import Validator,  { IValidationObject } from '../validator/Validator'
+import Validator, { IValidationObject } from '../validator/Validator'
 import { Model } from './';
 
 export interface IGame {
@@ -19,7 +19,8 @@ export interface IGame {
 
 class Game extends Model {
   id: string;
-  validation: IValidationObject;
+  validationOne: IValidationObject;
+  validationTwo: IValidationObject;
   game_category: string;
   name: {[key: string]: string};
   alias: {[key: string]: string};
@@ -34,23 +35,33 @@ class Game extends Model {
 
   constructor(data: IGame | undefined) {
     super();
+
     this.id = data?.id;
     this.game_category = data?.game_category;
     this.name = data?.name || {};
     this.alias = data?.alias || {};
     this.player_count = data?.player_count || 0;
-    this.image = data?.image;
+    this.image = data?.image || '';
+    this.imageBlob = data?.imageBlob || '';
     this.credits = data?.credits || '';
     this.description = data?.description || {};
     this.highlight = data?.highlight || false;
     this.views = data?.views || 0;
     this.order = data?.order || 0;
 
-    this.validation = {
-      name: Validator.input('enter_a_valid_name'),
+    this.validationOne = {
+      name: Validator.multiInput('enter_a_valid_name'),
+      imageBlob: Validator.input('enter_a_valid_image'),
+      player_count: Validator.uint('enter_a_valid_player_count'),
+      credits: Validator.input('enter_valid_credits'),
     }
 
-    Validator.initalize(this, this.validation)
+    this.validationTwo = {
+      description: Validator.multiInput('enter_a_valid_description'),
+    }
+
+    Validator.initalize(this, this.validationOne)
+    Validator.initalize(this, this.validationTwo)
   }
 }
 

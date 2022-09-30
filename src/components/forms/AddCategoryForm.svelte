@@ -1,18 +1,20 @@
 <script lang="ts">
-import { Label, MultiLangInput } from "../elements";
-import { categoryStore } from '../../stores';
+  import { Label, MultiLangInput, Error } from "../elements";
+  import { categoryStore } from '../../stores';
 
-let errors = [];
+  const { newCategory, categories } = categoryStore;
 
-const { newCategory, categories } = categoryStore;
+  let errors = [];
 
-$newCategory.order = $categories.length + 1;
+  $newCategory.order = $categories.length + 1;
 
-$newCategory.getActiveErrors().subscribe(activeErrors => {
-  errors = activeErrors;
-})
+  $newCategory.getActiveErrors().subscribe(activeErrors => {
+    errors = activeErrors;
+  })
 
 </script>
+
+<Error errors={errors}/>
 
 <div>
   <div>
