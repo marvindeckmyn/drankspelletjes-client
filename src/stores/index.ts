@@ -4,3 +4,4 @@ export { default as accountStore } from './accountStore';
 export { default as modalStore } from './modalStore';
 export { default as categoryStore } from './categoryStore';
 export { default as gameStore } from './gameStore';
+export { default as necessityStore } from './necessityStore';

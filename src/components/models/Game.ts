@@ -8,7 +8,7 @@ export interface IGame {
   name: {[key: string]: string};
   alias: {[key: string]: string};
   player_count: number;
-  image: string;
+  img: string;
   credits: string;
   description: {[key: string]: string};
   highlight: boolean;
@@ -25,7 +25,7 @@ class Game extends Model {
   name: {[key: string]: string};
   alias: {[key: string]: string};
   player_count: number;
-  image: string;
+  img: string;
   credits: string;
   description: {[key: string]: string};
   highlight: boolean;
@@ -41,7 +41,7 @@ class Game extends Model {
     this.name = data?.name || {};
     this.alias = data?.alias || {};
     this.player_count = data?.player_count || 0;
-    this.image = data?.image || '';
+    this.img = data?.img || '';
     this.imageBlob = data?.imageBlob || '';
     this.credits = data?.credits || '';
     this.description = data?.description || {};

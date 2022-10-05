@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { accountStore, gameStore } from '../../stores';
+  import { accountStore, gameStore, necessityStore } from '../../stores';
   import { AddButton, Checkbox, DeleteButton,
     Error, Input, Label, MultiLangInput } from '../elements';
   import { GameNecessity } from '../models';
@@ -7,7 +7,8 @@
 
   let errors = [];
 
-  const { newGame, newNecessity, newNecessities } = gameStore;
+  const { newGame } = gameStore;
+  const { newNecessity, newNecessities } = necessityStore;
   const { account } = accountStore;
 
   $newGame.credits = $account.name;

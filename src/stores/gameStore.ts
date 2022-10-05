@@ -15,16 +15,10 @@ class GameStore {
   newGame: Writable<Game>;
   selectedGame: Writable<Game>;
 
-  newNecessity: Writable<GameNecessity>;
-  newNecessities: Writable<GameNecessity[]>;
-
   constructor() {
     this.games = writable([]);
     this.newGame = writable(new Game(undefined));
     this.selectedGame = writable(new Game(undefined));
-
-    this.newNecessity = writable(new GameNecessity(undefined));
-    this.newNecessities = writable([]);
   }
 
   // getGamesByCategory fetches all the games of a category
@@ -75,6 +69,8 @@ class GameStore {
       games.push(new Game(game));
       return games;
     })
+
+    return game.id;
   }
 
   // updateGame updates an existing game.

@@ -1,10 +1,17 @@
 <script lang="ts">
-  import { gameStore, globalStore, modalStore } from "../../stores";
+  import { categoryStore, gameStore, globalStore, 
+    modalStore, necessityStore } from "../../stores";
   import { FormattedMessage, Modal, Button } from "../elements";
   import { AddGameFormTwo } from "../forms";
+    import { Game } from "../models";
+  import Validator from "../validator/Validator";
+  import { getNotificationsContext } from 'svelte-notifications';
+  import { translate } from '../../i18n';
 
-  const { newGame } = gameStore;
+  const { newGame, games} = gameStore;
+  const { selectedCategory } = categoryStore;
   const { lang } = globalStore;
+  const { addNotification } = getNotificationsContext();
 
   const closeModal = () => {
     modalStore.closeModal('addGameTwo');
@@ -16,8 +23,43 @@
   }
 
   const addGame = async () => {
+    try {
+      await Validator.validate($newGame, $newGame.validationTwo);
 
-  }
+      const reader = new FileReader();
+      const response = await fetch($newGame.imageBlob);
+      const blob = await response.blob();
+
+      reader.readAsDataURL(blob);
+      reader.onload = async () => {
+        $newGame.img = reader.result as string;
+        $newGame.img = $newGame.img.split(',')[1];
+
+        $newGame.game_category = $selectedCategory.id;
+        $newGame.order = $games.length + 1;
+
+        const gameId = await gameStore.postGame();
+
+        await necessityStore.postNecessities(gameId);
+
+        newGame.update(game => {
+          game = new Game(undefined);
+          return game;
+        })
+
+        addNotification({
+          text: translate('game_added', $lang),
+          position: 'top-center',
+          type: 'success',
+          removeAfter: 2000,
+        })
+
+        closeModal();
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  } 
 
   $: game = {"game": $newGame.name[$lang]};
 </script>

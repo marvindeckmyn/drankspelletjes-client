@@ -658,5 +658,17 @@
     "tr": "Önceki",
     "hr": "Prethodno",
     "ceb": "Kaniadto"
+  },
+  "enter_a_valid_description": {
+    "en": "Enter a valid description",
+    "nl": "Voer een geldige beschrijving in",
+    "fr": "Entrez une description valide",
+    "de": "Geben Sie eine gültige Beschreibung ein",
+    "es": "Introduzca una descripción válida",
+    "it": "Inserire una descrizione valida",
+    "pt": "Introduzir uma descrição válida",
+    "tr": "Geçerli bir açıklama girin",
+    "hr": "Unesite važeći opis",
+    "ceb": "Pagsulod ug balido nga deskripsyon"
   }
 }
