@@ -9,7 +9,6 @@
 
   const { newGame } = gameStore;
   const { newNecessity, newNecessities } = necessityStore;
-  const { account } = accountStore;
 
   const addNecessity = () => {
     newNecessities.update(necessities => {

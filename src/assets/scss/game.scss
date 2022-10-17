@@ -1,0 +1,27 @@
+$main-color: #9d32cf;
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(5, 2fr);
+  grid-gap: 20px;
+}
+
+li {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 900px) {
+  ul {
+    display: block;
+  }
+}

@@ -634,5 +634,41 @@
     "tr": "Geçerli bir açıklama girin",
     "hr": "Unesite važeći opis",
     "ceb": "Pagsulod ug balido nga deskripsyon"
+  },
+  "game_added": {
+    "en": "Drinking game added",
+    "nl": "Drankspelletje toegevoegd",
+    "fr": "Jeu de boisson ajouté",
+    "de": "Trinkspiel hinzugefügt",
+    "es": "Juego de beber añadido",
+    "it": "Aggiunta di un gioco di bevute",
+    "pt": "Adicionado o jogo da bebida",
+    "tr": "İçme oyunu eklendi",
+    "hr": "Dodana igra za piće",
+    "ceb": "Gidugang ang dula sa pag-inom"
+  },
+  "edit_game": {
+    "en": "Edit game",
+    "nl": "Bewerk spel",
+    "fr": "Editer le jeu",
+    "de": "Spiel bearbeiten",
+    "es": "Editar juego",
+    "it": "Modifica gioco",
+    "pt": "Editar jogo",
+    "tr": "Oyun düzenleme",
+    "hr": "Uredi igru",
+    "ceb": "Pag-edit sa dula"
+  },
+  "delete_game": {
+    "en": "Delete game",
+    "nl": "Verwijder spel",
+    "fr": "Supprimer le jeu",
+    "de": "Spiel löschen",
+    "es": "Eliminar el juego",
+    "it": "Eliminare il gioco",
+    "pt": "Apagar jogo",
+    "tr": "Oyunu sil",
+    "hr": "Izbriši igru",
+    "ceb": "Pagtangtang sa dula"
   }
 }
