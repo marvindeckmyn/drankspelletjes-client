@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Router, Route } from 'svelte-routing';
-  import { Login, AdminGames, AdminSubmissions,
+  import { Login, AdminGames,
   AdminOverview, AdminCategories } from './components/pages';
   import { LanguageSelector } from './components/partials';
   import { Aside } from './components/global';
@@ -39,7 +39,6 @@
   <Route path="/jorisblomme" component={AdminOverview} />
   <Route path="/jorisblomme/login" component={Login} />
   <Route path="/jorisblomme/categories" component={AdminCategories} />
-  <Route path="/jorisblomme/submissions" component={AdminSubmissions} />
 
   <Route path="/jorisblomme/categories/games/:id" let:params>
     <AdminGames id="{params.id}"/>

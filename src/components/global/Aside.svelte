@@ -41,11 +41,6 @@
            <FormattedMessage id="drinking_games"/>
          </Link>
        </li>
-       <li>
-         <Link id={$currentPath.includes('submissions') && 'active'} to={`/jorisblomme/submissions`}>
-           <FormattedMessage id="submissions"/>
-         </Link>
-       </li>
      </ul> 
 
      <div id="logout" on:click={logout}>
