@@ -9,7 +9,6 @@ export interface IGame {
   alias: {[key: string]: string};
   player_count: number;
   img: string;
-  credits: string;
   description: {[key: string]: string};
   highlight: boolean;
   views: number;
@@ -26,7 +25,6 @@ class Game extends Model {
   alias: {[key: string]: string};
   player_count: number;
   img: string;
-  credits: string;
   description: {[key: string]: string};
   highlight: boolean;
   views: number;
@@ -43,7 +41,6 @@ class Game extends Model {
     this.player_count = data?.player_count || 0;
     this.img = data?.img || '';
     this.imageBlob = data?.imageBlob || '';
-    this.credits = data?.credits || '';
     this.description = data?.description || {};
     this.highlight = data?.highlight || false;
     this.views = data?.views || 0;
@@ -53,7 +50,6 @@ class Game extends Model {
       name: Validator.multiInput('enter_a_valid_name'),
       imageBlob: Validator.input('enter_a_valid_image'),
       player_count: Validator.uint('enter_a_valid_player_count'),
-      credits: Validator.input('enter_valid_credits'),
     }
 
     this.validationTwo = {

@@ -467,30 +467,6 @@
     "hr": "Kockice, kemijska olovka...",
     "ceb": "Dice, ballpen..."
   },
-  "credits": {
-    "en": "Credits",
-    "nl": "Credits",
-    "fr": "Crédits",
-    "de": "Kredite",
-    "es": "Créditos",
-    "it": "Crediti",
-    "pt": "Créditos",
-    "tr": "Krediler",
-    "hr": "Zasluge",
-    "ceb": "Mga kredito"
-  },
-  "placeholder_game_credits": {
-    "en": "Andrew, Marvin, Joris...",
-    "nl": "Andrew, Marvin, Joris...",
-    "fr": "Andrew, Marvin, Joris...",
-    "de": "Andrew, Marvin, Joris...",
-    "es": "Andrew, Marvin, Joris...",
-    "it": "Andrew, Marvin, Joris...",
-    "pt": "Andrew, Marvin, Joris...",
-    "tr": "Andrew, Marvin, Joris...",
-    "hr": "Andrew, Marvin, Joris...",
-    "ceb": "Andrew, Marvin, Joris..."
-  },
   "highlight_game": {
     "en": "Highlight drinking game",
     "nl": "Drankspelletje uitlichten",
@@ -586,18 +562,6 @@
     "tr": "Geçerli bir oyuncu sayısı girin",
     "hr": "Unesite važeći broj igrača",
     "ceb": "Pagsulod ug balido nga ihap sa magdudula"
-  },
-  "enter_valid_credits": {
-    "en": "Enter valid credits",
-    "nl": "Voer geldige credits in",
-    "fr": "Entrez des crédits valides",
-    "de": "Gültige Kredite eingeben",
-    "es": "Introduzca los créditos válidos",
-    "it": "Inserire crediti validi",
-    "pt": "Introduzir créditos válidos",
-    "tr": "Geçerli kredileri girin",
-    "hr": "Unesite važeće kredite",
-    "ceb": "Pagsulod ug balido nga mga kredito"
   },
   "explain_the_drinking_game": {
     "en": "Explain the drinking game {game}",

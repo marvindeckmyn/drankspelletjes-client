@@ -11,8 +11,6 @@
   const { newNecessity, newNecessities } = necessityStore;
   const { account } = accountStore;
 
-  $newGame.credits = $account.name;
-
   const addNecessity = () => {
     newNecessities.update(necessities => {
       necessities.push($newNecessity);
@@ -100,15 +98,6 @@
 
         <AddButton onClick={addNecessity} />
       </div>
-    </div>
-
-    <div>
-      <Label htmlFor="credits" text="credits" />
-      <Input
-      entity={$newGame}
-      name="credits"
-      placeholder="placeholder_game_credits"
-      />
     </div>
 
     <div id="check">
